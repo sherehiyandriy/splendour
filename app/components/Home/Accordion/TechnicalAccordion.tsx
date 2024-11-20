@@ -1,60 +1,47 @@
-"use client"
+"use client";
 
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import { Box, Typography } from '@mui/material';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
-import WhiteCustomButton from '../../WhiteButton';
-import FullCustomDivider from '../../FullDivider';
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import { Box, Typography } from "@mui/material";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import IndeterminateCheckBoxIcon from "@mui/icons-material/IndeterminateCheckBox";
+import WhiteCustomButton from "../../WhiteButton";
+import FullCustomDivider from "../../FullDivider";
+import Image from "next/image";
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(() => ({
-    '&:not(:last-child)': {
-        borderBottom: 'none',
+    "&:not(:last-child)": {
+        borderBottom: "none",
     },
-    '&::before': {
-        display: 'none',
+    "&::before": {
+        display: "none",
     },
-    padding: 0, // Set padding to 0 for Accordion
+    padding: 0,
 }));
 
-const AccordionSummary = styled((props: AccordionSummaryProps) => {
-    const { expanded, ...rest } = props;
-    return (
-        <MuiAccordionSummary
-            expandIcon={
-                expanded ? (
-                    <IndeterminateCheckBoxIcon sx={{ fontSize: '30px', color: '#dbc6bc' }} />
-                ) : (
-                    <AddBoxIcon sx={{ fontSize: '30px', color: '#dbc6bc' }} />
-                )
-            }
-            {...rest}
-        />
-    );
-})(() => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between', // Added justify-content: space-between
-    padding: 0, // Remove padding
-    '& .MuiAccordionSummary-expandIconWrapper': {
-        position: 'relative',
+const AccordionSummary = styled(MuiAccordionSummary)(() => ({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 0,
+    "& .MuiAccordionSummary-expandIconWrapper": {
+        position: "relative",
         right: 0,
     },
-    '& .MuiAccordionSummary-content': {
-        margin: 0, // Remove margin
+    "& .MuiAccordionSummary-content": {
+        margin: 0,
     },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(() => ({
-    backgroundColor: '#17181c',
-    color: 'white',
-    padding: 0, // Remove padding
+    backgroundColor: "#17181c",
+    color: "white",
+    padding: 0,
 }));
 
 export default function TechnicalAccordion() {
@@ -66,40 +53,46 @@ export default function TechnicalAccordion() {
         };
 
     return (
-        <div style={{ padding: 0 }}> {/* Root component padding and margin set to 0 */}
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <div style={{ padding: 0 }}>
+            <Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")}>
                 <AccordionSummary
                     aria-controls="panel1d-content"
                     id="panel1d-header"
-                    expanded={expanded === 'panel1'}
                     style={{
-                        borderBottom: '2px solid #DBC6BC',
-                        backgroundColor: '#17181c',
-                        color: 'white',
+                        borderBottom: "2px solid #DBC6BC",
+                        backgroundColor: "#17181c",
+                        color: "white",
                     }}
+                    expandIcon={
+                        expanded === "panel1" ? (
+                            <IndeterminateCheckBoxIcon sx={{ fontSize: "30px", color: "#dbc6bc" }} />
+                        ) : (
+                            <AddBoxIcon sx={{ fontSize: "30px", color: "#dbc6bc" }} />
+                        )
+                    }
                 >
-                    <Box sx={{ textAlign: 'left' }}>
+                    <Box sx={{ textAlign: "left" }}>
                         <Typography
                             variant="h3"
                             color="#dbc6bc"
                             sx={{
                                 fontWeight: 300,
-                                fontFamily: 'Montserrat',
-                                fontSize: { xs: '8px', sm: '10px', md: '12px', lg: '20px' },
+                                fontFamily: "Montserrat",
+                                fontSize: { xs: "8px", sm: "10px", md: "12px", lg: "20px" },
                             }}
                         >
-                            02
+                            04
                         </Typography>
                         <Typography
                             variant="h3"
                             color="white"
                             sx={{
                                 fontWeight: 300,
-                                fontFamily: 'Raleway',
-                                fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '50px' },
+                                fontFamily: "Raleway",
+                                fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
                             }}
                         >
-                            TECHNICAL DRAWINGS
+                            INSTALLATION
                         </Typography>
                     </Box>
                 </AccordionSummary>
@@ -111,24 +104,34 @@ export default function TechnicalAccordion() {
                                 color="white"
                                 sx={{
                                     fontWeight: 300,
-                                    alignContent: 'flex-start',
-                                    fontFamily: 'Montserrat',
+                                    alignContent: "flex-start",
+                                    fontFamily: "Montserrat",
                                     fontSize: {
                                         xs: "8px",
-                                        sm: "10px",  // Small screens
-                                        md: "12px",  // Medium screens
-                                        lg: "15px"
-                                    }
+                                        sm: "10px",
+                                        md: "12px",
+                                        lg: "15px",
+                                    },
                                 }}
                             >
-                                Define your target mEvery project begins with well-taken measures. We will visit the construction site in order to take the exact dimensions needed to create the technical drawings.arket and approach for the market
+                                Every project begins with well-taken measures. We will visit the
+                                construction site in order to take the exact dimensions needed to
+                                create the technical drawings.
                             </Typography>
-                            <WhiteCustomButton label={'Learn More'} iconSrc={'/images/vector.svg'} />
+                            <WhiteCustomButton label={"Learn More"} iconSrc={"/images/vector.svg"} />
                         </Box>
                         <Box className="flex w-1/2">
-                            <img
+                            {/* <img
                                 src="/images/background.png"
                                 alt="Plus"
+                                className="flex w-full"
+                            /> */}
+                            <Image
+                                src="/images/background.png"
+                                alt="Plus"
+                                layout="responsive"
+                                width={500} // Specify width and height for proper optimization
+                                height={300}
                                 className="flex w-full"
                             />
                         </Box>

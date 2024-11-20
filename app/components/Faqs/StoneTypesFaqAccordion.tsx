@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { Box, Typography } from '@mui/material';
 import AddBoxIcon from '@mui/icons-material/AddBox';
@@ -23,21 +23,7 @@ const Accordion = styled((props: AccordionProps) => (
     padding: 0, // Set padding to 0 for Accordion
 }));
 
-const AccordionSummary = styled((props: AccordionSummaryProps) => {
-    const { expanded, ...rest } = props;
-    return (
-        <MuiAccordionSummary
-            expandIcon={
-                expanded ? (
-                    <IndeterminateCheckBoxIcon sx={{ fontSize: '30px', color: '#F9C275' }} />
-                ) : (
-                    <AddBoxIcon sx={{ fontSize: '30px', color: '#F9C275' }} />
-                )
-            }
-            {...rest}
-        />
-    );
-})(() => ({
+const AccordionSummary = styled(MuiAccordionSummary)(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between', // Added justify-content: space-between
@@ -71,12 +57,18 @@ export default function StoneTypesFaqAccordion() {
                 <AccordionSummary
                     aria-controls="panel1d-content"
                     id="panel1d-header"
-                    expanded={expanded === 'panel1'}
                     style={{
                         borderBottom: '2px solid #F9C275',
                         backgroundColor: '#17181c',
                         color: 'white',
                     }}
+                    expandIcon={
+                        expanded === 'panel1' ? (
+                            <IndeterminateCheckBoxIcon sx={{ fontSize: '30px', color: '#F9C275' }} />
+                        ) : (
+                            <AddBoxIcon sx={{ fontSize: '30px', color: '#F9C275' }} />
+                        )
+                    }
                 >
                     <Box sx={{ textAlign: 'left' }}>
                         <Typography
@@ -88,7 +80,7 @@ export default function StoneTypesFaqAccordion() {
                                 fontSize: { xs: '15px', sm: '20px', md: '25px', lg: '30px' },
                             }}
                         >
-                            WHAT TYPES OF NATURAL STONE DO YOU OFFER?
+                            WHAT ARE THE BENEFITS OF USING NATURAL STONE?
                         </Typography>
                     </Box>
                 </AccordionSummary>
@@ -122,19 +114,19 @@ export default function StoneTypesFaqAccordion() {
                             />
                             <Image
                                 src="/images/Faqs/StoneFaqProducts/product2.png"
-                                alt="Stone1"
+                                alt="Stone2"
                                 width={150}
                                 height={150}
                             />
                             <Image
                                 src="/images/Faqs/StoneFaqProducts/product3.png"
-                                alt="Stone1"
+                                alt="Stone3"
                                 width={150}
                                 height={150}
                             />
                             <Image
                                 src="/images/Faqs/StoneFaqProducts/product4.png"
-                                alt="Stone1"
+                                alt="Stone4"
                                 width={150}
                                 height={150}
                             />

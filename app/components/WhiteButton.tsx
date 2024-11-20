@@ -2,7 +2,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
-import { SxProps, Theme } from '@mui/material/styles';
 
 // Define the component's props with TypeScript types
 interface CustomButtonProps {

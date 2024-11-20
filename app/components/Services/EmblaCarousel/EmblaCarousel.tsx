@@ -16,12 +16,11 @@ interface Resource {
 }
 
 type PropType = {
-  slides: number[]
   options?: EmblaOptionsType
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
+  const { options } = props
   const [emblaRed, emblaApi] = useEmblaCarousel(options)
   const [slidesInView, setSlidesInView] = useState<number[]>([])
 
@@ -63,7 +62,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <LazyLoadImage
               key={index}
               index={index}
-              imgSrc={resource.imageUrl}
+              imgSrc={resource.imageUrl||"images/Vector.svg"}
               inView={slidesInView.indexOf(index) > -1}
             />
           ))}

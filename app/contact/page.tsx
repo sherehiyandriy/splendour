@@ -20,7 +20,6 @@ import './embla.css';
 
 
 const ServicesPage = () => {
-    const [value, setValue] = React.useState<number | null>(5);
     return (
         <Box className="container mx-auto space-y-12">
 
@@ -382,7 +381,7 @@ const ServicesPage = () => {
                             textAlign: 'start',
                         }}
                     >
-                        We're available Monday-Friday, 9:00 am - 4:00 pm, and Saturday, 9:30 am - 1:30 pm
+                        We&apos;re available Monday-Friday, 9:00 am - 4:00 pm, and Saturday, 9:30 am - 1:30 pm
                     </Typography>
                 </Box>
             </Box>

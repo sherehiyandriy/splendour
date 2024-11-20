@@ -1,7 +1,7 @@
 // components/DateCarouselButton.tsx
 "use client"; // This line makes this file a client component in Next.js
 
-import { Box, Typography, Divider } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 interface ServiceCarouselButtonProps {
     service: string,

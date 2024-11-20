@@ -120,7 +120,7 @@ const FaqPage = () => {
                             }
                         }}
                     >
-                        No problem! Our team is always ready to assist you. Contact us by phone at (03) 9873 4941, email us at info@splendourinstone.com, or visit our Contact Us page for details. We're happy to answer any questions you may have.
+                        No problem! Our team is always ready to assist you. Contact us by phone at (03) 9873 4941, email us at info@splendourinstone.com, or visit our Contact Us page for details. We&apos;re happy to answer any questions you may have.
                     </Typography>
                 </Box>
             </Box>

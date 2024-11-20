@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 import { Box } from "@mui/material";
+import Image from "next/image";
 
 // Define the structure of each resource
 interface Resource {
@@ -119,9 +120,17 @@ const MaterialCarousel: React.FC = () => {
                                 className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0 rounded-2xl"
                                 style={{ backgroundImage: `url(${resource.imageUrl || ""})` }}
                             >
-                                <img
+                                {/* <img
                                     src={resource.imageUrl || ""}
                                     alt={resource.product_name}
+                                    className="w-full aspect-square hidden rounded-2xl"
+                                /> */}
+                                <Image
+                                    src={resource.imageUrl || "images/Vector.svg"}
+                                    alt="Plus"
+                                    layout="responsive"
+                                    width={500} // Specify width and height for proper optimization
+                                    height={300}
                                     className="w-full aspect-square hidden rounded-2xl"
                                 />
                             </a>

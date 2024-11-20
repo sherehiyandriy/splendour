@@ -11,16 +11,12 @@ interface Resource {
     service: string
 }
 
-interface ServiceCarouselProps {
-}
-
-
 
 // Carousel component
 
-const ServiceCarousel: React.FC<ServiceCarouselProps> = () => {
+const ServiceCarousel = () => {
 
-    const [resources, setResources] = useState<Resource[]>(data.resources);
+    const [resources] = useState<Resource[]>(data.resources);
     const [maxScrollWidth, setMaxScrollWidth] = useState<number>(0);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [initialized, setInitialized] = useState<boolean>(false);

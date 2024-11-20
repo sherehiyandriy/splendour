@@ -11,16 +11,12 @@ interface Resource {
   time: string
 }
 
-interface TimeCarouselProps {
-}
-
-
 
 // Carousel component
 
-const TimeCarousel: React.FC<TimeCarouselProps> = () => {
+const TimeCarousel = () => {
 
-  const [resources, setResources] = useState<Resource[]>(data.resources);
+  const [resources] = useState<Resource[]>(data.resources);
   const [maxScrollWidth, setMaxScrollWidth] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [initialized, setInitialized] = useState<boolean>(false);

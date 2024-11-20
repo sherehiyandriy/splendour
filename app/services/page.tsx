@@ -19,8 +19,6 @@ import WhiteCustomButton from '../components/WhiteButton';
 import './embla.css';
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
-const SLIDE_COUNT = 3
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const ServicesPage = () => {
     const [value] = React.useState<number | null>(5);
@@ -158,7 +156,7 @@ const ServicesPage = () => {
                 </Box>
             </Box>
 
-            <ServocesEmblaCarousel slides={SLIDES} options={OPTIONS} />
+            <ServocesEmblaCarousel options={OPTIONS} />
 
             <CustomPartDivider />
 
@@ -805,7 +803,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
                         </Typography>
                     </Box>
 
@@ -864,7 +862,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
                         </Typography>
                     </Box>
 
@@ -923,7 +921,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
                         </Typography>
                     </Box>
 
