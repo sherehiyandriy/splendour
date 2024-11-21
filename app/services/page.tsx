@@ -6,7 +6,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import { Box, Typography, Avatar, Rating } from '@mui/material';
+import { Box, Typography, Rating } from '@mui/material';
 import Image from 'next/image';
 import { EmblaOptionsType } from 'embla-carousel'
 
@@ -19,6 +19,8 @@ import WhiteCustomButton from '../components/WhiteButton';
 import './embla.css';
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
+const SLIDE_COUNT = 3
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const ServicesPage = () => {
     const [value] = React.useState<number | null>(5);
@@ -75,10 +77,11 @@ const ServicesPage = () => {
                 <Box className="flex flex-col w-5/12">
                     <Box className="w-full">
                         <Image
-                            src="/images/Service/advertisement/main.png"
+                            src="/images/Service/advertisement/main.jpg"
                             alt="main"
                             width={720}
                             height={550}
+                            className='rounded-xl'
                         />
                     </Box>
                 </Box>
@@ -107,18 +110,20 @@ const ServicesPage = () => {
                 <Box className="flex w-5/12 gap-3">
                     <Box className="flex w-1/2">
                         <Image
-                            src="/images/Service/advertisement/image1.png"
+                            src="/images/Service/advertisement/image1.jpg"
                             alt="main"
                             width={344}
                             height={148}
+                            className='rounded-xl'
                         />
                     </Box>
                     <Box className="flex w-1/2">
                         <Image
-                            src="/images/Service/advertisement/image2.png"
+                            src="/images/Service/advertisement/image2.jpg"
                             alt="main"
                             width={344}
                             height={148}
+                            className='rounded-xl'
                         />
                     </Box>
                 </Box>
@@ -156,7 +161,7 @@ const ServicesPage = () => {
                 </Box>
             </Box>
 
-            <ServocesEmblaCarousel options={OPTIONS} />
+            <ServocesEmblaCarousel slides={SLIDES} options={OPTIONS} />
 
             <CustomPartDivider />
 
@@ -261,10 +266,11 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/consultation.png"
+                        src="/images/Service/journey/consultation.jpg"
                         alt="main"
                         width={471}
                         height={221}
+                        className='rounded-lg'
                     />
                 </Box>
             </Box>
@@ -327,10 +333,11 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/discussion.png"
+                        src="/images/Service/journey/discussion.jpg"
                         alt="main"
                         width={471}
                         height={221}
+                        className='rounded-lg'
                     />
                 </Box>
             </Box>
@@ -393,10 +400,11 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/measurement.png"
+                        src="/images/Service/journey/measurement.jpg"
                         alt="main"
                         width={471}
                         height={221}
+                        className='rounded-lg'
                     />
                 </Box>
             </Box>
@@ -459,7 +467,7 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/allocation.png"
+                        src="/images/Service/journey/allocation.jpg"
                         alt="main"
                         width={471}
                         height={221}
@@ -485,7 +493,7 @@ const ServicesPage = () => {
                                 lg: "20px"
                             }
                         }}
-                    >06</Typography>
+                    >05</Typography>
                 </Box>
                 <Box className="flex w-2/5 flex-col justify-center gap-5">
                     <Typography
@@ -503,7 +511,7 @@ const ServicesPage = () => {
                             }
                         }}
                     >
-                        DELIVERY-(INSTALLATIONI)
+                        DELIVERY - (INSTALLATION)
                     </Typography>
                     <Typography
                         variant="h3"
@@ -525,7 +533,7 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/installation.png"
+                        src="/images/Service/journey/installation.jpg"
                         alt="main"
                         width={471}
                         height={221}
@@ -534,6 +542,7 @@ const ServicesPage = () => {
             </Box>
 
             <FullCustomFaqDivider />
+
             <Box className="flex w-full justify-between gap-6">
                 <Box className="flex w-1/5 items-start">
                     <Typography
@@ -590,7 +599,7 @@ const ServicesPage = () => {
                 </Box>
                 <Box className="flex w-2/5">
                     <Image
-                        src="/images/Service/journey/installation.png"
+                        src="/images/Service/journey/installation.jpg"
                         alt="main"
                         width={471}
                         height={221}
@@ -606,7 +615,7 @@ const ServicesPage = () => {
                     position: 'relative',
                     // width: '80%',
                     aspectRatio: '1.77 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/Service/satisfaction.png")',
+                    backgroundImage: 'url("/images/Service/satisfaction.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',
@@ -754,7 +763,9 @@ const ServicesPage = () => {
 
             <Box className="flex w-full justify-between gap-6">
                 <Box className="flex flex-col w-1/3 justify-center items-center">
-                    <Avatar alt="Remy Sharp" src="/images/Service/avatar.png" sx={{ width: '200px', height: '200px' }} />
+                    <Box className="flex w-1/3">
+                        <Image alt='Remy Sharp' src="/images/Service/avatar.png" width={200} height={200} />
+                    </Box>
                     <Box className="flex items-center">
                         <Box>
                             <Typography
@@ -803,7 +814,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.”
                         </Typography>
                     </Box>
 
@@ -813,7 +824,9 @@ const ServicesPage = () => {
 
                 </Box>
                 <Box className="flex flex-col w-1/3 justify-center items-center">
-                    <Avatar alt="Remy Sharp" src="/images/Service/avatar.png" sx={{ width: '200px', height: '200px' }} />
+                    <Box className="flex w-1/3">
+                        <Image alt='Remy Sharp' src="/images/Service/avatar.png" width={200} height={200} />
+                    </Box>
                     <Box className="flex items-center">
                         <Box>
                             <Typography
@@ -862,7 +875,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.”
                         </Typography>
                     </Box>
 
@@ -872,7 +885,9 @@ const ServicesPage = () => {
 
                 </Box>
                 <Box className="flex flex-col w-1/3 justify-center items-center">
-                    <Avatar alt="Remy Sharp" src="/images/Service/avatar.png" sx={{ width: '200px', height: '200px' }} />
+                    <Box className="flex w-1/3">
+                        <Image alt='Remy Sharp' src="/images/Service/avatar.png" width={200} height={200} />
+                    </Box>
                     <Box className="flex items-center">
                         <Box>
                             <Typography
@@ -921,7 +936,7 @@ const ServicesPage = () => {
                                 }
                             }}
                         >
-                            &quot;I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.&quot;
+                            "I&apos;m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I&apos;ve bought has exceeded my expectations.”
                         </Typography>
                     </Box>
 
@@ -939,13 +954,13 @@ const ServicesPage = () => {
             <Box className="flex w-full flex-col relative items-center justify-center text-white">
                 <Box className="flex justify-center items-center w-full">
                     <Image
-                        src="/images/Portfolio/partner.png" // Ensure this image is in the public/images folder
+                        src="/images/Service/partner.png" // Ensure this image is in the public/images folder
                         alt="Background"
                         // layout="fill"
                         objectFit="cover"
                         className="opacity-30 w-1/4"
-                        width={600}
-                        height={600}
+                        width={400}
+                        height={400}
                     />
                 </Box>
                 <Box className="absolute z-10 text-center p-8 w-full">

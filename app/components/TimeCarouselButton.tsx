@@ -10,7 +10,7 @@ interface TimeCarouselButtonProps {
 
 const TimeCarouselButton: React.FC<TimeCarouselButtonProps> = ({ time }) => {
     return (
-        <Box className="flex flex-col rounded-lg aspect-[3.4/1] justify-center items-center" sx={{ border: '1px solid #DBC6BC', minWidth: '13%'}}>
+        <Box className="flex flex-col rounded-lg aspect-[3.4/1] justify-center items-center" sx={{ border: '1px solid #DBC6BC', minWidth: '13%' }}>
             <Typography
                 className="flex w-1/2 h-1/2 justify-center items-center"
                 variant="h3"

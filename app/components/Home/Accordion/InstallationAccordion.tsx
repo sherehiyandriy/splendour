@@ -1,45 +1,64 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import { Box, Typography } from "@mui/material";
-import AddBoxIcon from "@mui/icons-material/AddBox";
-import IndeterminateCheckBoxIcon from "@mui/icons-material/IndeterminateCheckBox";
-import WhiteCustomButton from "../../WhiteButton";
-import FullCustomDivider from "../../FullDivider";
-import Image from "next/image"; // Import Image component
+"use client"
+
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
+import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import { Box, Typography } from '@mui/material';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
+import WhiteCustomButton from '../../WhiteButton';
+import FullCustomDivider from '../../FullDivider';
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(() => ({
-    "&:not(:last-child)": {
-        borderBottom: "none",
+    '&:not(:last-child)': {
+        borderBottom: 'none',
     },
-    "&::before": {
-        display: "none",
+    '&::before': {
+        display: 'none',
     },
-    padding: 0,
+    padding: 0, // Set padding to 0 for Accordion
 }));
 
-const AccordionSummary = styled(MuiAccordionSummary)(() => ({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 0,
-    "& .MuiAccordionSummary-expandIconWrapper": {
-        position: "relative",
+interface CustomAccordionSummaryProps extends AccordionSummaryProps {
+    expanded?: boolean; // Add your custom expanded prop
+}
+
+const AccordionSummary = styled((props: CustomAccordionSummaryProps) => {
+    const { expanded, ...rest } = props;
+    return (
+        <MuiAccordionSummary
+            expandIcon={
+                expanded ? (
+                    <IndeterminateCheckBoxIcon sx={{ fontSize: '30px', color: '#dbc6bc' }} />
+                ) : (
+                    <AddBoxIcon sx={{ fontSize: '30px', color: '#dbc6bc' }} />
+                )
+            }
+            {...rest}
+        />
+    );
+})(() => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between', // Added justify-content: space-between
+    padding: 0, // Remove padding
+    '& .MuiAccordionSummary-expandIconWrapper': {
+        position: 'relative',
         right: 0,
     },
-    "& .MuiAccordionSummary-content": {
-        margin: 0,
+    '& .MuiAccordionSummary-content': {
+        margin: 0, // Remove margin
     },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(() => ({
-    backgroundColor: "#17181c",
-    color: "white",
-    padding: 0,
+    backgroundColor: '#17181c',
+    color: 'white',
+    padding: 0, // Remove padding
 }));
 
 export default function InstallationAccordion() {
@@ -51,32 +70,26 @@ export default function InstallationAccordion() {
         };
 
     return (
-        <div style={{ padding: 0 }}>
-            <Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")}>
+        <div style={{ padding: 0 }}> {/* Root component padding and margin set to 0 */}
+            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
                     aria-controls="panel1d-content"
                     id="panel1d-header"
+                    expanded={expanded === 'panel1'}
                     style={{
-                        borderBottom: "2px solid #DBC6BC",
-                        backgroundColor: "#17181c",
-                        color: "white",
+                        borderBottom: '2px solid #DBC6BC',
+                        backgroundColor: '#17181c',
+                        color: 'white',
                     }}
-                    expandIcon={
-                        expanded === "panel1" ? (
-                            <IndeterminateCheckBoxIcon sx={{ fontSize: "30px", color: "#dbc6bc" }} />
-                        ) : (
-                            <AddBoxIcon sx={{ fontSize: "30px", color: "#dbc6bc" }} />
-                        )
-                    }
                 >
-                    <Box sx={{ textAlign: "left" }}>
+                    <Box sx={{ textAlign: 'left' }}>
                         <Typography
                             variant="h3"
                             color="#dbc6bc"
                             sx={{
                                 fontWeight: 300,
-                                fontFamily: "Montserrat",
-                                fontSize: { xs: "8px", sm: "10px", md: "12px", lg: "20px" },
+                                fontFamily: 'Montserrat',
+                                fontSize: { xs: '8px', sm: '10px', md: '12px', lg: '20px' },
                             }}
                         >
                             04
@@ -86,11 +99,11 @@ export default function InstallationAccordion() {
                             color="white"
                             sx={{
                                 fontWeight: 300,
-                                fontFamily: "Raleway",
-                                fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+                                fontFamily: 'Raleway',
+                                fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '50px' },
                             }}
                         >
-                            INSTALLATION
+                            INSTALLATIONI
                         </Typography>
                     </Box>
                 </AccordionSummary>
@@ -102,30 +115,24 @@ export default function InstallationAccordion() {
                                 color="white"
                                 sx={{
                                     fontWeight: 300,
-                                    alignContent: "flex-start",
-                                    fontFamily: "Montserrat",
+                                    alignContent: 'flex-start',
+                                    fontFamily: 'Montserrat',
                                     fontSize: {
                                         xs: "8px",
-                                        sm: "10px",
-                                        md: "12px",
-                                        lg: "15px",
-                                    },
+                                        sm: "10px",  // Small screens
+                                        md: "12px",  // Medium screens
+                                        lg: "15px"
+                                    }
                                 }}
                             >
-                                Every project begins with well-taken measures. We will visit the
-                                construction site in order to take the exact dimensions needed to
-                                create the technical drawings.
+                                Define your target mEvery project begins with well-taken measures. We will visit the construction site in order to take the exact dimensions needed to create the technical drawings.arket and approach for the market
                             </Typography>
-                            <WhiteCustomButton label={"Learn More"} iconSrc={"/images/vector.svg"} />
+                            <WhiteCustomButton label={'Learn More'} iconSrc={'/images/vector.svg'} />
                         </Box>
                         <Box className="flex w-1/2">
-                            {/* Replace <img> with <Image> */}
-                            <Image
-                                src="/images/background.png"
-                                alt="Plus"
-                                layout="responsive"
-                                width={500} // Specify width and height for proper optimization
-                                height={300}
+                            <img
+                                src="/images/Home/Services/measurement.jpg"
+                                alt="measurement"
                                 className="flex w-full"
                             />
                         </Box>

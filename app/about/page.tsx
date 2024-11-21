@@ -25,10 +25,11 @@ const AboutPage = () => {
                         <Box className="w-1/2"></Box>
                         <Box className="w-1/2">
                             <Image
-                                src="/images/About/Products/product1.png"
+                                src="/images/About/Products/product1.jpg"
                                 alt="Logo"
                                 width={410}
                                 height={355}
+                                className='rounded-xl'
                             />
                         </Box>
                     </Box>
@@ -47,36 +48,40 @@ const AboutPage = () => {
                                 fontWeight: 300,
                             }}
                         >
-                            Unearth the Enduring Beauty of Stone with Splendour in Stone, <span style={{ fontWeight: 600 }}>Australia’s No. 1 High-end Stone Supplier</span>
+                            Unearth the Enduring Beauty of Stone with Splendour in Stone, <span style={{ fontWeight: 600, color: '#DBC6BC' }}>Australia’s No. 1 High-end Stone Supplier</span>
                         </Typography>
                     </Box>
                 </Box>
                 <Box className="flex flex-col w-1/4 space-y-3">
                     <Image
-                        src="/images/About/Products/product2.png"
+                        src="/images/About/Products/product2.jpg"
                         alt="Logo"
                         width={410}
                         height={457}
+                        className='rounded-xl'
                     />
                     <Image
-                        src="/images/About/Products/product4.png"
+                        src="/images/About/Products/product4.jpg"
                         alt="Logo"
                         width={410}
                         height={327}
+                        className='rounded-xl'
                     />
                 </Box>
                 <Box className="flex flex-col w-1/4 space-y-3">
                     <Image
-                        src="/images/About/Products/product3.png"
+                        src="/images/About/Products/product3.jpg"
                         alt="Logo"
                         width={410}
                         height={276}
+                        className='rounded-xl'
                     />
                     <Image
-                        src="/images/About/Products/product5.png"
+                        src="/images/About/Products/product5.jpg"
                         alt="Logo"
                         width={410}
                         height={276}
+                        className='rounded-xl'
                     />
                     <Typography
                         variant="h4"
@@ -106,7 +111,7 @@ const AboutPage = () => {
                     width: '100%',
                     // height: '100%', // Adjust to match the image height
                     aspectRatio: '3 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/About/mission.png")',
+                    backgroundImage: 'url("/images/About/mission.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',
@@ -288,10 +293,11 @@ const AboutPage = () => {
 
                 <Box className="flex w-1/2">
                     <Image
-                        src="/images/About/man1.png"
+                        src="/images/About/man1.jpg"
                         alt="Logo"
                         width={840}
                         height={830}
+                        className='rounded-xl'
                     />
                 </Box>
 
@@ -395,10 +401,11 @@ const AboutPage = () => {
 
                 <Box className="flex w-1/2">
                     <Image
-                        src="/images/About/man2.png"
+                        src="/images/About/man2.jpg"
                         alt="Logo"
                         width={840}
                         height={830}
+                        className='rounded-xl'
                     />
                 </Box>
 
@@ -497,34 +504,38 @@ const AboutPage = () => {
             <Box className="flex w-full gap-8 ">
                 <Box className="flex w-1/4">
                     <Image
-                        src="/images/About/Agricultural/image1.png"
+                        src="/images/About/Agricultural/image1.jpg"
                         alt="Logo"
                         width={408}
                         height={413}
+                        className='rounded-lg'
                     />
                 </Box>
                 <Box className="flex w-1/4">
                     <Image
-                        src="/images/About/Agricultural/image2.png"
+                        src="/images/About/Agricultural/image2.jpg"
                         alt="Logo"
                         width={408}
                         height={413}
+                        className='rounded-lg'
                     />
                 </Box>
                 <Box className="flex w-1/4">
                     <Image
-                        src="/images/About/Agricultural/image3.png"
+                        src="/images/About/Agricultural/image3.jpg"
                         alt="Logo"
                         width={408}
                         height={413}
+                        className='rounded-lg'
                     />
                 </Box>
                 <Box className="flex w-1/4">
                     <Image
-                        src="/images/About/Agricultural/image4.png"
+                        src="/images/About/Agricultural/image4.jpg"
                         alt="Logo"
                         width={408}
                         height={413}
+                        className='rounded-lg'
                     />
                 </Box>
             </Box>
@@ -643,7 +654,7 @@ const AboutPage = () => {
                     position: 'relative',
                     width: '100%',
                     aspectRatio: '1.56 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/About/house.png")',
+                    backgroundImage: 'url("/images/About/house.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',
@@ -838,7 +849,7 @@ const AboutPage = () => {
                     position: 'relative',
                     width: '100%',
                     aspectRatio: '1.77 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/About/gallery.png")',
+                    backgroundImage: 'url("/images/About/gallery.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',

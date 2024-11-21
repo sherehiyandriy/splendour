@@ -2,15 +2,15 @@
     "resources": [
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Service/main.png"
+        "imageUrl": "images/Service/main.jpg"
       },
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Service/image1.png"
+        "imageUrl": "images/Service/image1.jpg"
       },
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Service/image2.png"
+        "imageUrl": "images/Service/image2.jpg"
       }
     ]
   }

@@ -102,7 +102,7 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
                                     textAlign: 'start',
                                 }}
                             >
-                                Our journey begins with the foundation – the stone itself. We source a captivating selection of natural stone cladding, walling, and paving, meticulously chosen for their aesthetics, durability, and versatility. Whether you seek granite&apos;s classic elegance or limestone&apos;s contemporary charm, our extensive range caters to every design preference.
+                                Our journey begins with the foundation – the stone itself. We source a captivating selection of natural stone cladding, walling, and paving, meticulously chosen for their aesthetics, durability, and versatility. Whether you seek granite's classic elegance or limestone's contemporary charm, our extensive range caters to every design preference.
                             </Typography>
                         </Box>
 

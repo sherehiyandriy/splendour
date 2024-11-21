@@ -16,6 +16,7 @@ interface Resource {
 }
 
 type PropType = {
+  slides: number[]
   options?: EmblaOptionsType
 }
 
@@ -58,11 +59,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRed}>
         <div className="embla__container">
-          {data.resources.map((resource: Resource, index: number) => (
+          {data.resources.filter((resource: Resource) => resource.imageUrl).map((resource: Resource, index: number) => (
             <LazyLoadImage
               key={index}
               index={index}
-              imgSrc={resource.imageUrl||"images/Vector.svg"}
+              imgSrc={resource.imageUrl!}
               inView={slidesInView.indexOf(index) > -1}
             />
           ))}

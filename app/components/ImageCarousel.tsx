@@ -25,14 +25,14 @@ interface CarouselProps {
 
 const DateCarousel: React.FC<CarouselProps> = ({ images }) => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
-
+    let newSlide;
     const handleNextSlide = () => {
-        const newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;
+        newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;
         setCurrentSlide(newSlide);
     };
 
     const handlePrevSlide = () => {
-        const newSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1;
+        newSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1;
         setCurrentSlide(newSlide);
     };
 

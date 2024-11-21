@@ -13,8 +13,6 @@ import Image from 'next/image';
 import FullCustomFaqDivider from '../components/FullCustomFaqDivider';
 import CustomPartDivider from '../components/CustomPartDivider';
 
-
-
 import './embla.css';
 
 
@@ -32,7 +30,7 @@ const ServicesPage = () => {
                     width: '100%',
                     // height: '100%', // Adjust to match the image height
                     aspectRatio: '6.14 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/Contact/header_main.png")',
+                    backgroundImage: 'url("/images/Contact/header_main.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',
@@ -119,7 +117,7 @@ const ServicesPage = () => {
                             }
                         }}
                     >
-                        Whether you&apos;re embarking on a grand renovation or seeking a touch of elegance for a specific space, our exquisite stone collection and exceptional design expertise are here to help.
+                        Whether you're embarking on a grand renovation or seeking a touch of elegance for a specific space, our exquisite stone collection and exceptional design expertise are here to help.
                     </Typography>
                 </Box>
                 <Box className="w-1/4">
@@ -138,7 +136,7 @@ const ServicesPage = () => {
                             }
                         }}
                     >
-                        Our dedicated team is passionate about natural stone and its potential to elevate your space. They&apos;re eager to discuss your project&apos;s specific needs and guide you through our extensive selection of stone cladding, walling, and paving options.
+                        Our dedicated team is passionate about natural stone and its potential to elevate your space. They're eager to discuss your project's specific needs and guide you through our extensive selection of stone cladding, walling, and paving options.
                     </Typography>
                 </Box>
                 <Box className="w-1/4">
@@ -176,18 +174,20 @@ const ServicesPage = () => {
                 <Box className="flex w-full gap-3">
                     <Box className="w-1/3">
                         <Image
-                            src="/images/Contact/image1.png"
+                            src="/images/Contact/image1.jpg"
                             alt="main"
                             width={552}
                             height={395}
+                            className="rounded-lg"
                         />
                     </Box>
                     <Box className="w-2/3">
                         <Image
-                            src="/images/Contact/image2.png"
+                            src="/images/Contact/image2.jpg"
                             alt="main"
                             width={1136}
                             height={395}
+                            className="rounded-lg"
                         />
                     </Box>
                 </Box>
@@ -195,36 +195,40 @@ const ServicesPage = () => {
                     <Box className="w-1/2 space-y-3">
                         <Box className="flex w-full">
                             <Image
-                                src="/images/Contact/image3.png"
+                                src="/images/Contact/image3.jpg"
                                 alt="main"
                                 width={844}
                                 height={252}
+                                className="rounded-lg"
                             />
                         </Box>
                         <Box className="flex w-full">
                             <Image
-                                src="/images/Contact/image4.png"
+                                src="/images/Contact/image4.jpg"
                                 alt="main"
                                 width={844}
                                 height={127}
+                                className="rounded-lg"
                             />
                         </Box>
 
                     </Box>
                     <Box className="w-1/6">
                         <Image
-                            src="/images/Contact/image5.png"
+                            src="/images/Contact/image5.jpg"
                             alt="main"
                             width={262}
                             height={395}
+                            className="rounded-lg"
                         />
                     </Box>
                     <Box className="w-1/3">
                         <Image
-                            src="/images/Contact/image6.png"
+                            src="/images/Contact/image6.jpg"
                             alt="main"
                             width={552}
                             height={395}
+                            className="rounded-lg"
                         />
                     </Box>
                 </Box>
@@ -381,7 +385,7 @@ const ServicesPage = () => {
                             textAlign: 'start',
                         }}
                     >
-                        We&apos;re available Monday-Friday, 9:00 am - 4:00 pm, and Saturday, 9:30 am - 1:30 pm
+                        We're available Monday-Friday, 9:00 am - 4:00 pm, and Saturday, 9:30 am - 1:30 pm
                     </Typography>
                 </Box>
             </Box>
@@ -501,18 +505,19 @@ const ServicesPage = () => {
                         // layout="fill"
                         objectFit="cover"
                         className="opacity-30 w-1/4"
-                        width={600}
-                        height={600}
+                        width={400}
+                        height={400}
                     />
                 </Box>
-                <Box className="absolute z-10 text-center p-8 w-full">
+
+                <Box className="w-3/5 absolute z-10 text-center p-8">
                     <Typography variant="h2" className="mb-4 font-bold" sx={{
                         fontFamily: 'Raleway',
                         fontSize: {
                             xs: '20px', // Font size for extra small screens
                             sm: '30px', // Font size for small screens
                             md: '40px', // Font size for medium screens
-                            lg: '60px', // Font size for large screens
+                            lg: '70px', // Font size for large screens
                         },
                         fontWeight: 300,
                     }}>

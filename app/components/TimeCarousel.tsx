@@ -11,10 +11,9 @@ interface Resource {
   time: string
 }
 
-
 // Carousel component
 
-const TimeCarousel = () => {
+const TimeCarousel: React.FC = () => {
 
   const [resources] = useState<Resource[]>(data.resources);
   const [maxScrollWidth, setMaxScrollWidth] = useState<number>(0);

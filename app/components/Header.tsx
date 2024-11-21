@@ -4,8 +4,7 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <Box className="w-full  h-8 sm:h-12 md:h-16 lg:h-24 flex justify-between items-center">
             <Box className="flex w-1/2 justify-center">

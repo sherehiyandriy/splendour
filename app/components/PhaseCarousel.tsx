@@ -11,12 +11,9 @@ interface Resource {
     phase: string
 }
 
-
-
-
 // Carousel component
 
-const PhaseCarousel = () => {
+const PhaseCarousel: React.FC = () => {
 
     const [resources] = useState<Resource[]>(data.resources);
     const [maxScrollWidth, setMaxScrollWidth] = useState<number>(0);

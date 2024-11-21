@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { IconButton } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
-import Image from "next/image";
 
 // Define the structure of each resource
 interface Resource {
@@ -124,17 +123,9 @@ const SplenderoursProductsCarousel: React.FC = () => {
                                 className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0 rounded-2xl"
                                 style={{ backgroundImage: `url(${resource.imageUrl || ""})` }}
                             >
-                                {/* <img
+                                <img
                                     src={resource.imageUrl || ""}
                                     alt={resource.product_name}
-                                    className="w-full aspect-square hidden rounded-2xl"
-                                /> */}
-                                <Image
-                                    src={resource.imageUrl || ""}
-                                    alt={resource.product_name}
-                                    layout="responsive"
-                                    width={500} // Specify width and height for proper optimization
-                                    height={300}
                                     className="w-full aspect-square hidden rounded-2xl"
                                 />
                             </a>
@@ -144,18 +135,10 @@ const SplenderoursProductsCarousel: React.FC = () => {
                                 <h3 className="text-white py-6 px-3 mx-auto text-xl">
                                     {resource.product_name}
                                 </h3>
-                                {/* <img
+                                <img
                                     src={resource.subImageUrl || ""}
                                     alt={resource.product_subname}>
-                                </img> */}
-                                <Image
-                                src={resource.subImageUrl || ""}
-                                alt={resource.product_subname}
-                                layout="responsive"
-                                width={500} // Specify width and height for proper optimization
-                                height={300}
-                                // className="flex w-full"
-                            />
+                                </img>
                                 <IconButton aria-label="search" sx={{ width: '90px', height: '90px', backgroundColor: '#F9C275' }}>
                                     <SearchIcon sx={{ fontSize: '43px', color: 'white' }} />
                                 </IconButton>

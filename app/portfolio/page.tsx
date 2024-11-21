@@ -22,7 +22,7 @@ import WhiteCustomButton from '../components/WhiteButton';
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
 
-const PortfolioPage=() => {
+const PortfolioPage = () => {
     return (
         <Box className="container mx-auto space-y-12">
 
@@ -107,7 +107,7 @@ const PortfolioPage=() => {
                             }
                         }}
                     >
-                        WE DON&apos;T JUST DEAL IN STONE
+                        WE DON'T JUST DEAL IN STONE
                     </Typography>
                 </Box>
 
@@ -158,7 +158,7 @@ const PortfolioPage=() => {
                             }
                         }}
                     >
-                        Explore a curated selection of projects, each a testament to natural stone&apos;s enduring beauty and versatility. From modern kitchen renovations featuring captivating stone splashbacks to stunning outdoor living spaces paved with timeless elegance, discover how we&apos;ve collaborated with clients to translate their visions into reality.
+                        Explore a curated selection of projects, each a testament to natural stone's enduring beauty and versatility. From modern kitchen renovations featuring captivating stone splashbacks to stunning outdoor living spaces paved with timeless elegance, discover how we've collaborated with clients to translate their visions into reality.
                     </Typography>
                 </Box>
             </Box>
@@ -201,7 +201,7 @@ const PortfolioPage=() => {
                             }
                         }}
                     >
-                        Whether you&apos;re seeking classic sophistication or a burst of contemporary flair, our portfolio offers a wealth of inspiration.
+                        Whether you're seeking classic sophistication or a burst of contemporary flair, our portfolio offers a wealth of inspiration.
                     </Typography>
                 </Box>
             </Box>
@@ -213,7 +213,7 @@ const PortfolioPage=() => {
                     width: '100%',
                     // height: '100%', // Adjust to match the image height
                     aspectRatio: '3 / 1', // Aspect ratio of 3:1 (width to height)
-                    backgroundImage: 'url("/images/Portfolio/mission.png")',
+                    backgroundImage: 'url("/images/Portfolio/mission.jpg")',
                     backgroundSize: 'cover', // Ensure the image covers the entire box
                     backgroundPosition: 'center', // Center the image
                     display: 'flex',
@@ -352,7 +352,7 @@ const PortfolioPage=() => {
                             }
                         }}
                     >
-                        Beyond the visual appeal, each project description highlights the practical benefits of using natural stone. Discover how stone&apos;s durability enhances functionality, its timeless style adds lasting value, and its sustainable nature creates an eco-conscious space.
+                        Beyond the visual appeal, each project description highlights the practical benefits of using natural stone. Discover how stone's durability enhances functionality, its timeless style adds lasting value, and its sustainable nature creates an eco-conscious space.
 
                     </Typography>
                 </Box>
@@ -364,8 +364,8 @@ const PortfolioPage=() => {
 
             <CustomPartDivider />
 
-            <Box className="flex w-full gap-8">
-                <Box className="w-1/4">
+            <Box className="flex w-full gap-6">
+                <Box className="flex justify-center w-1/4">
                     <Image
                         src="/images/Portfolio/products/product1.png"
                         alt="Stone1"
@@ -374,7 +374,7 @@ const PortfolioPage=() => {
                     />
                 </Box>
 
-                <Box className="w-1/4">
+                <Box className="flex justify-center w-1/4">
                     <Image
                         src="/images/Portfolio/products/product2.png"
                         alt="Stone1"
@@ -383,7 +383,7 @@ const PortfolioPage=() => {
                     />
                 </Box>
 
-                <Box className="w-1/4">
+                <Box className="flex justify-center w-1/4">
 
                     <Image
                         src="/images/Portfolio/products/product3.png"
@@ -393,7 +393,7 @@ const PortfolioPage=() => {
                     />
                 </Box>
 
-                <Box className="w-1/4">
+                <Box className="flex justify-center w-1/4">
                     <Image
                         src="/images/Portfolio/products/product4.png"
                         alt="Stone1"
@@ -441,7 +441,7 @@ const PortfolioPage=() => {
                             }
                         }}
                     >
-                        Beyond the visual appeal, each project description highlights the practical benefits of using natural stone. Discover how stone&apos;s durability enhances functionality, its timeless style adds lasting value, and its sustainable nature creates an eco-conscious space.
+                        Beyond the visual appeal, each project description highlights the practical benefits of using natural stone. Discover how stone's durability enhances functionality, its timeless style adds lasting value, and its sustainable nature creates an eco-conscious space.
                     </Typography>
 
                     <Box className="flex w-full justify-between gap-4">
@@ -469,14 +469,14 @@ const PortfolioPage=() => {
                     <Typography variant="h2" className="mb-4 font-bold" sx={{
                         fontFamily: 'Raleway',
                         fontSize: {
-                            xs: '30px', // Font size for extra small screens
-                            sm: '40px', // Font size for small screens
-                            md: '50px', // Font size for medium screens
-                            lg: '70px', // Font size for large screens
+                            xs: '25px', // Font size for extra small screens
+                            sm: '35px', // Font size for small screens
+                            md: '45px', // Font size for medium screens
+                            lg: '60px', // Font size for large screens
                         },
                         fontWeight: 300,
                     }}>
-                        WE LOOK FORWARD TO CONNECTING WITH YOU
+                        LET SPLENDOUR IN STONE BE YOUR PARTNER
                     </Typography>
                     <Typography variant="h5" className="mb-8" sx={{
                         fontFamily: 'Montserrat',
@@ -488,7 +488,7 @@ const PortfolioPage=() => {
                         },
                         fontWeight: 300,
                     }}>
-                        and collaborating on your next stone design project.
+                        in crafting a masterpiece that endures for generations.
                     </Typography>
                 </Box>
             </Box>

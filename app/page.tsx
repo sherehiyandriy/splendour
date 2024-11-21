@@ -30,14 +30,15 @@ import InstallationAccordion from "./components/Home/Accordion/InstallationAccor
 
 
 const PARTDATA = [
-    { image: '/images/carousel_interactive/image1.png' },
-    { image: '/images/carousel_interactive/card1.png' },
-    { image: '/images/carousel_interactive/card2.png' },
+    { image: '/images/Home/Interactive_part/card1.jpg' },
+    { image: '/images/Home/Interactive_part/card2.jpg' },
+    { image: '/images/Home/Interactive_part/card3.jpg' },
+    { image: '/images/Home/Interactive_part/card4.jpg' }
 ]
 const DATA = [
-    { image: '/images/Interactive_slider/slide1.svg' },
-    { image: '/images/Interactive_slider/slide2.svg' },
-    { image: '/images/Interactive_slider/slide3.svg' },
+    { image: '/images/Home/Interactive_main/slide1.png' },
+    { image: '/images/Home/Interactive_main/slide2.png' },
+    { image: '/images/Home/Interactive_main/slide3.png' },
 ]
 
 
@@ -200,14 +201,14 @@ const HomePage = () => {
 
                 <Box className="flex w-full flex-col gap-3">
                     <Box className="flex w-full justify-between gap-3">
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product1.png" product_subname="CHARLOTTE" />
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product2.png" product_subname="JAMIESON" />
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product3.png" product_subname="BUFFALO" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product1.jpg" product_subname="CHARLOTTE" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product2.jpg" product_subname="JAMIESON" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product3.jpg" product_subname="BUFFALO" />
                     </Box>
                     <Box className="flex w-full justify-between gap-3">
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product4.png" product_subname="BELOKA" />
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product5.png" product_subname="SHOREHAM" />
-                        <CustomWallCard product_image_src="images/Home/WallingRange/product6.png" product_subname="BEACHPORT" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product4.jpg" product_subname="BELOKA" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product5.jpg" product_subname="SHOREHAM" />
+                        <CustomWallCard product_image_src="images/Home/WallingRange/product6.jpg" product_subname="BEACHPORT" />
                     </Box>
                 </Box>
 
@@ -260,8 +261,8 @@ const HomePage = () => {
                     </Box>
                 </Box>
 
-                <Box className="w-full flex flex-col aspect-[3.77/1] bg-white rounded-lg p-8" style={{ marginTop: '270px' }}>
-                    <Box className="flex w-1/4 justify-between">
+                <Box className="w-full flex flex-col aspect-[3.77/1] min-w-1 bg-white rounded-lg p-8" style={{ marginTop: '270px' }}>
+                    <Box className="flex w-1/4 justify-between gap-x-4">
                         <CarouselPart data={PARTDATA} />
                         <Box className='flex flex-col w-2/3 h-[127px] justify-around'>
                             <Typography
@@ -293,7 +294,7 @@ const HomePage = () => {
                                         xs: "8px",
                                         sm: "10px",  // Small screens
                                         md: "12px",  // Medium screens
-                                        lg: "15px"
+                                        lg: "12px"
                                     }
                                 }}
                             >
@@ -368,14 +369,14 @@ const HomePage = () => {
 
                 <Box className="flex w-full flex-col gap-3">
                     <Box className="flex w-full justify-between gap-3">
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product1.png" product_subname="PORPHYRY" />
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product2.png" product_subname="QUARTZITE" />
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product3.png" product_subname="MARBLE" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product1.jpg" product_subname="PORPHYRY" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product2.jpg" product_subname="QUARTZITE" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product3.jpg" product_subname="MARBLE" />
                     </Box>
                     <Box className="flex w-full justify-between gap-3">
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product4.png" product_subname="LIMESTONE" />
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product5.png" product_subname="GRANTE" />
-                        <CustomWallCard product_image_src="images/Home/PavingRange/product6.png" product_subname="BLUESTONE" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product4.jpg" product_subname="LIMESTONE" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product5.jpg" product_subname="GRANTE" />
+                        <CustomWallCard product_image_src="images/Home/PavingRange/product6.jpg" product_subname="BLUESTONE" />
                     </Box>
                 </Box>
 
@@ -418,7 +419,7 @@ const HomePage = () => {
                                     }
                                 }}
                             >
-                                We offer a wide range of services that focus on the use of stone materials. Our clients can expect top-notch service that includes design, manufacturing, delivery and assembly. Our team of experts use state-of-the-art technology and equipment to ensure that every project is built to the highest quality standards. The client&apos;s experience is at the heart of our motivation. We provide support throughout the entire project. Our products are unique and adapted to the specifics of each client, and our clients can choose from a wide range of materials and colors. Also, our clients can rely on our support and advice throughout the process to ensure that their projects are successfully implemented. Our goal is to create products that will not only meet, but also exceed the expectations of our customers.
+                                We offer a wide range of services that focus on the use of stone materials. Our clients can expect top-notch service that includes design, manufacturing, delivery and assembly. Our team of experts use state-of-the-art technology and equipment to ensure that every project is built to the highest quality standards. The client's experience is at the heart of our motivation. We provide support throughout the entire project. Our products are unique and adapted to the specifics of each client, and our clients can choose from a wide range of materials and colors. Also, our clients can rely on our support and advice throughout the process to ensure that their projects are successfully implemented. Our goal is to create products that will not only meet, but also exceed the expectations of our customers.
                             </Typography>
                         </Box>
                         <Box className="w-0 lg:w-1/5">

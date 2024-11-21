@@ -50,16 +50,16 @@ export default function PracticalityCarousel() {
       <ul ref={containerRef} className="flex cursor-none items-start">
         {articles.map((article, index) => (
           <li
-          key={article.title}
-          ref={(el) => {
-            itemsRef.current[index] = el;
-          }}
-          className={cn(
-            "group relative shrink-0 select-none px-3 transition-opacity duration-300"
-          )}
-          style={{
-            flexBasis: "30%",
-          }}
+            key={article.title}
+            ref={(el) => {
+              itemsRef.current[index] = el;
+            }}
+            className={cn(
+              "group relative shrink-0 select-none px-3 transition-opacity duration-300"
+            )}
+            style={{
+              flexBasis: "30%",
+            }}
           >
             {/* Article Link */}
             <Link

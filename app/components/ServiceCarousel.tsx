@@ -11,10 +11,9 @@ interface Resource {
     service: string
 }
 
-
 // Carousel component
 
-const ServiceCarousel = () => {
+const ServiceCarousel: React.FC = () => {
 
     const [resources] = useState<Resource[]>(data.resources);
     const [maxScrollWidth, setMaxScrollWidth] = useState<number>(0);

@@ -52,14 +52,14 @@ const CustomButton: React.FC<CustomButtonProps> = ({ label, iconSrc, styles, bor
                 borderColor: { borderColor },
                 textTransform: 'none',
                 '&:hover': {
-                    backgroundColor: 'blue.500',
-                    color: 'blue',
-                    borderColor: 'blue',
+                    backgroundColor: 'white',
+                    color: 'blue.500',
+                    borderColor: 'white',
                 },
                 ...styles, // Apply additional styles if passed
             }}
         >
-            {label}
+            <span style={{color:`${borderColor}`}}>{label}</span>
         </Button>
     );
 };

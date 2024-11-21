@@ -2,15 +2,15 @@
     "resources": [
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Portfolio/practicality/left.png"
+        "imageUrl": "images/Portfolio/practicality/left.jpg"
       },
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Portfolio/practicality/main.png"
+        "imageUrl": "images/Portfolio/practicality/main.jpg"
       },
       {
         "product_name": "OUTDOOR",
-        "imageUrl": "images/Portfolio/practicality/right.png"
+        "imageUrl": "images/Portfolio/practicality/right.jpg"
       }
     ]
   }

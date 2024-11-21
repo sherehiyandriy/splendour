@@ -32,7 +32,7 @@ const Carousel = ({
     return (
         <div>
             {/* Carousel container */}
-            <div className="relative h-[592px] w-[592px] mt-[-450px] overflow-hidden rounded-md">
+            <div className="relative flex aspect-[1/1] max-w-1/2 min-w-1/4 w-[500px] mt-[-450px] overflow-hidden rounded-md">
                 {/* Image container */}
                 <div
                     ref={carouselRef}
@@ -83,7 +83,7 @@ const Carousel = ({
                 <button
                     disabled={currentImg === data.length - 1}
                     onClick={() => setCurrentImg((prev) => prev + 1)}
-                    className={`border px-4 py-2 font-bold ${currentImg === data.length - 1 && 'opacity-50'}`}
+                    className={`px-4 py-2 font-bold ${currentImg === data.length - 1 && 'opacity-50'}`}
                 >
                     {'N E X T >'}
                 </button>
